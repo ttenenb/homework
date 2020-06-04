@@ -1,0 +1,28 @@
+html{
+    background-color:black;
+}
+
+body{
+    margin: auto;
+    background-color: white;
+    max-width: 80em;
+}
+
+div{
+    background-color: yellow;
+    display: inline-block;
+    width: 300px;
+    height:150px;
+    border:2px solid black;
+    margin: 2em 2em 2em 2em;
+}
+
+h3{
+   text-align: center;
+   /*padding-top: 19%;*/
+   line-height: 6em; 
+}
+
+p{
+    padding: 30px;
+}
