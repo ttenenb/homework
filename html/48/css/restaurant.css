@@ -1,0 +1,108 @@
+
+  html{
+    background-color: honeydew;
+    
+  }
+  
+  body{
+    width: 75%;
+    text-align: center;
+    margin-left: 10%;
+  }
+  
+  
+  h1{
+    text-align: center;
+    font-size: 2rem;
+    color: firebrick;
+    border: 2px solid bisque ;
+    border-radius: 20px;
+  }
+  
+  header h1{
+   text-shadow:2px 2px 2px chartreuse;
+  }
+  
+  #ourRest{
+   margin: 0rem;
+   padding: 20px 2px 20px 2px;
+  }
+  
+  h2{
+   text-align: center;
+   font-family: 'Bangers';
+  }  
+  
+  .menu{
+    color: rgb(140, 240, 153);
+    transform: skewY(7deg);
+    letter-spacing: 10mm;
+  }
+  
+  a{
+    font-style: italic;
+    text-decoration: none;
+  }
+  a:link{
+    color: fuchsia;
+  }
+  
+  a:visited{
+    color:crimson;
+  }
+  
+  h3{
+    color:purple;
+  }
+  
+  div h3  {
+    background-color: rgb(76, 0, 255);
+    color: firebrick;
+    font-size: 4em;
+    line-height: 6px;
+  }
+  
+  #quality{
+    opacity:.5;
+  }
+  
+  ul{
+    list-style-type:none;
+    font-size: xx-large;
+  }
+ 
+  .main {
+    background-image: url(/images/pizza2.jpg);
+    height: 20em;
+    background-size: cover;
+    color:black;
+    opacity: .6;
+  
+  }
+
+ .menu{
+    clear: both;
+  }
+
+
+
+ @media screen and (min-width: 1071px) {
+    
+ 
+    header {
+        top: 0;
+        position: fixed;
+        width: 75%;
+        background-color: honeydew;
+        z-index: 1;
+    }
+
+ }
+
+ @media screen and (max-width: 799px) {
+    body{
+        margin:  0;
+        width: 100%;
+    }
+   
+ }

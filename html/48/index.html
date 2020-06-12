@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rome's Kosher Restaurant</title>
+    <link rel="icon" href="images/restaurant.jpg" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" />
+    <link rel="icon" href="images/restaurant.jpg" />
+    <link href="css/restaurant.css" rel="stylesheet" />
+    <style>
+        @media screen and (min-width: 1071px) {
+            body {
+                margin-top: 9%;
+            }
+        }
+
+        article>h3 {
+            margin-bottom: 3em;
+        }
+
+        article>p {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        h3+p {
+            color: rebeccapurple;
+        }
+
+        h3~p {
+            background-color: salmon;
+        }
+
+        article p:not(#unique) {
+            transform: rotate(9deg);
+        }
+
+        #unique {
+            margin-top: 5.75em;
+            margin-bottom: 5.75em;
+        }
+
+        article::first-line {
+            font-size: xx-large;
+        }
+
+        .form {
+            display: flex;
+            justify-content: center;
+            background-color: midnightblue;
+            color: mintcream;
+            flex-wrap: wrap;
+        }
+
+        textarea{
+            width: 45%;
+        }
+
+        #button{
+            height: 5em;
+            background-image: url(images/pizza_detail.jpg);
+            color:black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+        
+    </style>
+
+</head>
+
+
+<body>
+    <header>
+        <h1 id="ourRest">Rome's Kosher Restaurant</h1>
+
+        <h2>Come in for a delicious kosher meal!!</h2>
+
+    </header>
+    <img id="pic" src="images/restaurant.jpg" alt="Sorry image could not upload">
+    <div class="form">
+        <form method="POST" action="rest.php">
+            <p>Please fill out the form to get your coupons today!</p>
+            <input name="FullName" placeholder="Please enter your name" minlength="8"required />
+            <input type="email" name="email" " placeholder=" Please enter your email" required>
+            <input type="date" name="date">
+            <label for="evaluate">Please rate your experience: </label><input type="range" name="evaluate" id="evaluate"
+                min=1 max=5>
+            <textarea name="comments" id="comments" placeholder="Enter some comments please!" ></textarea>
+            <button id=button type="submit">Please click to submit</button>
+        </form>
+    </div>
+    <article>
+        <h3>Stop in and visit.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, autem maxime nisi
+            similique alias
+            laudantium ea consectetur eius nihil nemo eaque quas ipsa? Iusto, reprehenderit. Perspiciatis corrupti quo
+            sapiente ducimus blanditiis qui quae minus harum dolorem aut doloribus tenetur aperiam debitis dolor alias
+            non saepe ipsum at eaque, odit est dicta praesentium doloremque quaerat? Nisi veniam perspiciatis vel
+            nesciunt iure ex recusandae autem necessitatibus quaerat? Ad nisi sint molestias atque, eligendi quod beatae
+            architecto assumenda.
+        </p>
+        <p id="unique">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, autem maxime nisi similique
+            alia
+            laudantium ea consectetur eius nihil nemo eaque quas ipsa? Iusto, reprehenderit. Perspiciatis corrupti
+            quo
+            sapiente ducimus blanditiis qui quae minus harum dolorem aut doloribus tenetur aperiam debitis dolor
+            alias
+            non saepe ipsum at eaque, odit est dicta praesentium doloremque quaerat? Nisi veniam perspiciatis vel
+            nesciunt iure ex recusandae autem necessitatibus quaerat? Ad nisi sint molestias atque, eligendi quod
+            beatae
+            architecto assumenda.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, autem maxime nisi similique alias
+            laudantium ea consectetur eius nihil nemo eaque quas ipsa? Iusto, reprehenderit. Perspiciatis
+            corrupti quo
+            sapiente ducimus blanditiis qui quae minus harum dolorem aut doloribus tenetur aperiam debitis dolor
+            alias
+            non saepe ipsum at eaque, odit est dicta praesentium doloremque quaerat? Nisi veniam perspiciatis
+            vel
+            nesciunt iure ex recusandae autem necessitatibus quaerat? Ad nisi sint molestias atque, eligendi
+            quod beatae
+            architecto assumenda.
+        </p>
+    </article>
+    <hr>
+    <nav>
+        <ul>
+            <li><a href="menu.html">Click here for our menu</a></li>
+            <li><a href="pizza_detail.html">Click here for our history</a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+</body>
+
+</html>
