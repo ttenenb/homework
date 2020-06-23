@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            margin: 30px;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(9, 100px);
+            gap: 10px;
+        }
+
+        div {
+            background-color: orange;
+            grid-column-start: 2;
+        }
+
+
+        @media screen and (min-width: 600px) {
+            body {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            div {
+                background-color: green;
+            }
+
+            div:nth-child(even){
+                grid-column-start: 2;
+            }
+
+            div:nth-child(odd){
+                grid-column-start: 3;
+            }  
+            
+            div:nth-child(1) {
+                grid-column-end:-2;
+                grid-column-start:span 2;           
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            body {
+                grid-template-columns: repeat(6,1fr);
+            }
+
+            div {
+                background-color: red;
+            }
+
+            div:nth-child(1){
+                grid-column-end:-4;
+            }
+            div:nth-child(2), div:nth-child(6){
+                grid-column-start: 4;
+            }
+            div:nth-child(3), div:nth-child(7){
+                grid-column-start: 5;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>
