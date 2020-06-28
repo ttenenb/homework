@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ESTUFF</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            display: grid;
+            grid-template:
+                ".   header   ."
+                ".   products ."
+                ".   firstC   ."
+                ".   secondC  ."
+                ".   thirdC   ."
+                ".   form     ."
+                ".   finance  ."
+                ".   about    ."
+                /3em 1fr 3em
+        }
+
+        nav,
+        footer {
+            left: 0;
+            position: fixed;
+            width: 100%;
+            background-color: black;
+            color: white;
+        }
+
+        nav {
+            top: 0;
+            z-index: 1;
+        }
+
+        footer {
+            bottom: 0;
+            padding: 1em;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            padding-left: 3.5em;
+        }
+
+        li:not(:first-of-type) {
+            padding-left: 2em;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        .anchor {
+            scroll-margin-top: 4em;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        header,
+        form {
+            background-color: lightgray;
+            text-align: center;
+            margin-top: 2.5em;
+            padding: 2em;
+            border-bottom-right-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
+
+
+        header>h1 {
+            text-transform: uppercase;
+        }
+
+        #products {
+            grid-area: products;
+        }
+
+
+        .products {
+            text-align: center;
+        }
+
+        #firstC {
+            grid-area: firstC;
+        }
+
+        #secondC {
+            grid-area: secondC;
+        }
+
+        #thirdC {
+            grid-area: thirdC;
+        }
+
+        img,
+        video {
+            width: 100%;
+        }
+
+        .images>p {
+            display: table-cell;
+            vertical-align: top;
+            text-align: justify;
+        }
+
+        form {
+            grid-area: form;
+        }
+
+        form,
+        input {
+            border-radius: 6px;
+        }
+
+        input {
+            box-shadow: 3px 3px;
+        }
+
+        form>div {
+            display: block;
+            padding: 2px;
+        }
+
+        button {
+            margin-top: .5em;
+        }
+
+        #financials {
+            grid-area: finance;
+
+        }
+
+        #scrollable {
+            width: 75%;
+            overflow-x: auto;
+            margin: auto;
+
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 2px solid black;
+        }
+
+        caption,
+        td:first-child {
+            font-weight: bold;
+        }
+
+        td:last-child {
+            color: red;
+        }
+
+        td {
+            text-align: right;
+        }
+
+        tr:nth-child(even) {
+            background-color: lightblue;
+        }
+
+        tr:hover {
+            color: blue;
+        }
+
+        #aboutUs {
+            grid-area: about;
+        }
+
+        @media screen and (min-width: 1000px) {
+
+            body {
+                grid-template:
+                    ".      header    header    header   ."
+                    ".      products  products  products ."
+                    ".      firstC    secondC   thirdC   ."
+                    ".      form      form      form     ."
+                    ".      finance   finance   finance  ."
+                    ".      about     about     about    ."
+                    /1fr 2fr 2fr 2fr 1fr
+            }
+
+            ul {
+                padding-left: 13%;
+            }
+
+            img,
+            video {
+                margin: auto;
+                width: 100%;
+
+                display: block;
+            }
+
+            .images {
+                border-right: 2px solid black;
+                display: inline-block;
+                padding: 5px 15px;
+                box-sizing: border-box;
+                width: 32%;
+            }
+
+            #thirdC{
+                border-right: none;
+            }
+
+            form>div {
+                display: inline;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#signUp">Sign Up</a></li>
+            <li><a href="#financials">Financials</a></li>
+            <li><a href="#aboutUs">About Us</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>estuff</h1>
+        <h2>A <em>PCS</em> company</h2>
+    </header>
+    <div id="products" class="anchor">
+        <h3>Products</h3>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni eius velit pariatur odit accusantium nesciunt
+            natus. Voluptas, unde blanditiis? Deleniti.
+        </p>
+        <div id="firstC" class="images">
+            <h3 class="products">Computers</h3>
+            <img src="images/macworld.jpg">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, iure ducimus. Officiis rerum temporibus
+                ratione excepturi quibusdam impedit! Ex maxime id dicta perferendis itaque delectus eaque eius fugit
+                libero quo.</p>
+        </div>
+        <div id="secondC" class="images">
+            <h3 class="products">Choirs</h3>
+            <video src="images/El Hanaar Hazeh.mp4" width="456px" controls loop poster="images/shira.png"></video>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quaerat harum ratione veniam
+                perferendis sint! Enim, deserunt corrupti tempora velit sequi et cupiditate ad nulla hic, culpa aut
+                ?</p>
+        </div>
+        <div id="thirdC" class="images">
+            <h3 class="products">Candy</h3>
+            <img src="images/candy.png">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, modi suscipit. Molestias laboriosam
+                unde ducimus deserunt optio dicta debitis aperiam, eaque animi reiciendis nobis voluptatem voluptas
+                .</p>
+        </div>
+
+        <form id="signUp" method="POST" action="process.php" class="anchor">
+            <h3>Sign Me Up!</h3>
+            <div>
+                <label for="name">Name:</label>
+                <input id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+            </div>
+            <button id="button" type="submit">Sign me up!</button>
+        </form>
+
+        <div id="financials" class="anchor">
+            <h3>Financials</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt at illum rem fugit sit quas, optio
+                voluptatem eos non nostrum. Praesentium ratione delectus asperiores eius cum illo in aliquid sit.</p>
+            <div id="scrollable">
+                <table>
+                    <caption>Profits-By Quarter</caption>
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>1st Quarter profits</th>
+                            <th>2nd Quarter profits</th>
+                            <th>3rd Quarter profits</th>
+                            <th>4th Quarter profits</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2012</td>
+                            <td>$1254564.32</td>
+                            <td>$1154545.67</td>
+                            <td>$1236555.98</td>
+                            <td>$1368854.32</td>
+                            <td>$5050934.29</td>
+                        </tr>
+                        <tr>
+                            <td>2013</td>
+                            <td>$1368763.32</td>
+                            <td>$1432344.34</td>
+                            <td>$1982932.23</td>
+                            <td>$1989899.22</td>
+                            <td>$5318787.45</td>
+                        </tr>
+                        <tr>
+                            <td>2014</td>
+                            <td>$1867678.78</td>
+                            <td>$1769898.98</td>
+                            <td>$1878799.21</td>
+                            <td>$1798700.87</td>
+                            <td>$6187878.21</td>
+                        </tr>
+                        <tr>
+                            <td>2015</td>
+                            <td>$1827888.11</td>
+                            <td>$1767677.21</td>
+                            <td>NA</td>
+                            <td>NA</td>
+                            <td>$3078778.32</td>
+                        </tr>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">Total</td>
+                            <td>$20232233.23</td>
+                        </tr>
+                    </tfoot>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="aboutUs" class="anchor">
+            <h3>About us</h3>
+            <p>`Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas exercitationem recusandae blanditiis est
+                eum? At non sequi amet. Labore veritatis, perferendis laudantium dolore quia nesciunt velit fugit cum
+                sint, dolorem iure necessitatibus quae tempore veniam? Mollitia deserunt reprehenderit consequatur
+                pariatur exercitationem quasi ducimus dolorum officia excepturi nisi, in ullam suscipit voluptatibus,
+                eos adipisci, alias vitae ea architecto. Corporis nisi cumque aut et, beatae ipsum, blanditiis excepturi
+                voluptas pariatur rerum, suscipit officia aperiam est quibusdam quam provident. Atque, iusto ad velit
+                cum ex rem vero optio, consectetur, voluptatum repellat tenetur dicta explicabo dolore nemo laborum esse
+                molestiae iure impedit quos unde corrupti cumque? Laboriosam praesentium voluptates hic. Officia, totam
+                ut quidem tempora saepe provident itaque non qui odit laborum veniam impedit obcaecati eius illum harum
+                fuga cupiditate iste sunt tempore quos animi reiciendis, quaerat reprehenderit fugit! Repellat, sint
+                quidem laboriosam sequi suscipit laudantium fugiat placeat, debitis consequuntur ab quod ullam officia,
+                incidunt praesentium voluptatum! Odit corporis explicabo consequatur possimus perspiciatis sint, velit
+                quis accusantium incidunt nihil minima illum modi ex necessitatibus, at, unde minus eum non ipsum. Aut
+                architecto assumenda ex. Eligendi excepturi numquam aperiam minima tempore pariatur, nostrum iure amet
+                nulla dolorem a rerum, totam laborum fugiat officiis ea error corporis quasi odit asperiores cum
+                accusantium. Similique soluta eius sunt placeat, ut asperiores deserunt quam est vero eligendi illum
+                adipisci veniam repudiandae expedita! Ducimus corporis voluptas obcaecati explicabo quos nihil dolores
+                accusantium facilis maiores, tempora laborum quidem quam accusamus debitis id animi, ipsum numquam sequi
+                similique repellendus optio temporibus dicta perspiciatis iure? Corporis magni ab dolor obcaecati! Ut
+                autem similique facilis dolor ab. Beatae, reiciendis corporis expedita alias fuga a eveniet nulla.
+                Dolores distinctio necessitatibus unde ipsum, voluptas temporibus nam! Odio ex officiis totam vel
+                praesentium nisi? Repellat quos sapiente odit labore obcaecati maxime, quidem, aut illo vero omnis
+                quisquam eum. Debitis provident cupiditate expedita dicta dolorem perferendis, quos ipsa magni,
+                similique sint consequuntur nam eos non esse, asperiores animi. Quam vel est nam quia illo nostrum dicta
+                harum, ducimus dolorum at quae quod hic beatae possimus impedit nobis aliquid tempore? Itaque
+                voluptatibus rerum distinctio. Hic quaerat facere ea quis neque quae dicta, facilis pariatur laboriosam?
+                Dolorum doloremque necessitatibus molestiae quae molestias, consequuntur quo animi atque odit quibusdam
+                esse corporis dolore quam rerum architecto cum iure eveniet accusamus ipsam consectetur neque doloribus
+                sunt alias asperiores. Omnis, facere cupiditate aliquam eius veritatis cum vitae natus dolorem debitis
+                corporis? Quasi eum deleniti molestias, dicta voluptatibus nulla voluptatem amet nam dolores, maxime
+                repellat nesciunt. Quia quidem fugit sequi ipsa tenetur molestiae fuga culpa laudantium accusantium
+                minus dicta repellat saepe quos optio sapiente nulla, repudiandae corporis sit enim, provident sunt.
+                Cupiditate ut, molestias aliquid quibusdam fuga culpa tempore dolorem incidunt consequatur, architecto,
+                repellendus ea cumque suscipit. Illum atque, saepe quam nulla ipsam assumenda totam deleniti hic nisi
+                vel inventore nesciunt placeat eligendi, impedit minima ea! Inventore expedita cupiditate consequatur
+                voluptatum id aliquid nemo atque minima temporibus consectetur magni blanditiis perferendis, praesentium
+                ipsa qui quo illum impedit eius porro sapiente totam veniam. Delectus sint quidem explicabo rerum dolor
+                amet at repudiandae praesentium consequuntur exercitationem libero beatae et odio, esse porro voluptatem
+                tempora iusto molestias magnam omnis non. Consequuntur maxime eos vel cum rem commodi dignissimos dolore
+                debitis porro ad quidem deserunt incidunt quam, vitae necessitatibus autem beatae explicabo ratione
+                ducimus assumenda veritatis soluta aperiam? Aut fuga mollitia ab eum provident quidem temporibus
+                recusandae qui? Itaque, consequuntur. Error accusamus sapiente aut excepturi voluptate inventore optio
+                temporibus pariatur dolorem ad expedita debitis asperiores, amet cumque ullam veniam adipisci, provident
+                perspiciatis sed exercitationem delectus commodi totam, quidem quis? Expedita, laboriosam deleniti?
+                Optio esse delectus ipsa magni, exercitationem consequuntur quod nihil quasi pariatur. Delectus commodi
+                est, qui sint maxime vel voluptatibus beatae dolor dolorem! Fugit ut quod ipsam, dolorem unde ad. Earum
+                facilis repudiandae consequatur culpa dolor quasi, odit possimus laborum a doloremque reprehenderit
+                perspiciatis, officia animi deserunt libero cum nobis. Dolore rem cumque, odio et vero temporibus itaque
+                aliquid voluptate esse delectus eos pariatur corrupti porro id totam nobis eligendi non libero quis unde
+                tempore laboriosam voluptatum ab excepturi! Dolor iste temporibus suscipit atque recusandae quis fuga
+                exercitationem cupiditate asperiores iure. Laborum similique eos debitis quo expedita voluptatum, quasi
+                iure beatae dignissimos saepe culpa quis tenetur fugit cupiditate assumenda officiis obcaecati aliquam
+                dicta placeat doloremque omnis nostrum delectus voluptate id? Laboriosam quidem commodi voluptas odit
+                eum ratione vitae expedita natus et, explicabo aliquid doloremque asperiores, modi dolore iste
+                cupiditate nam! Voluptate id, velit ad porro minima doloribus quisquam rem earum quod laudantium et nisi
+                enim molestias? Deleniti aut quisquam minus rerum? Eligendi rerum dolore totam, eum animi sequi nisi
+                recusandae? Minus odio, maxime quae minima, placeat, suscipit porro quo voluptatibus tenetur commodi ad?
+                Dolores asperiores quaerat error eius placeat assumenda alias nihil amet vero ut. Sit assumenda ab porro
+                tempore odio possimus voluptatibus esse tenetur. Quis perferendis corporis culpa, ducimus totam
+                voluptatibus facere iusto odit ea dignissimos nam impedit numquam cum incidunt molestias distinctio
+                deleniti tempore? Atque alias, voluptatibus accusamus obcaecati exercitationem at blanditiis sed nulla
+                nisi eum molestiae iure nihil doloremque? Placeat necessitatibus deleniti consectetur quas quod saepe
+                nemo architecto omnis voluptatem aspernatur et officia at temporibus deserunt tempora, debitis inventore
+                sapiente atque asperiores optio animi quos accusamus quaerat. Deserunt, earum exercitationem ipsa minima
+                officia quod illo quo. Quae maxime, nesciunt enim, eligendi qui eius similique exercitationem quo nihil
+                ipsa sapiente quibusdam ducimus corporis, repellendus tempora voluptatem cupiditate? Accusamus,
+                distinctio eius. Repellat porro quibusdam vero exercitationem magni molestias cumque, perferendis amet
+                soluta repellendus consequuntur aperiam laborum libero, minus omnis officia molestiae sapiente commodi
+                delectus ex atque optio, dolor ab praesentium. Assumenda, nesciunt. Debitis velit ratione error
+                voluptate architecto? Dolorum omnis esse delectus a nobis doloremque dolores quam dicta necessitatibus,
+                quo nam, maxime fugiat? Labore, delectus minus sunt saepe laborum sint id recusandae, quaerat qui velit
+                dolores cupiditate quasi repudiandae veritatis suscipit rem harum temporibus! Consequuntur accusantium
+                quis fugiat a iste aliquam natus cupiditate consequatur doloremque. Totam laboriosam dolore autem
+                reprehenderit fugit nam rem veniam expedita tenetur dignissimos libero sunt explicabo, eveniet ipsa
+                debitis in vel illum dicta.</p>
+        </div>
+
+        <footer>&copy;PCS 2020</footer>
+
+</body>
+
+</html>
