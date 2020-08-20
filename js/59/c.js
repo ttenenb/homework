@@ -1,3 +1,10 @@
+// SL - 88
+// SL - nice - but maybe review the classes where we went over closures and how they can keep "private" data in parent environment alive...
+
+// SL - why no for loops?
+
+// SL - why use call? Way more complicated then needed
+// why not just window.app.incrementCounter(); ???
 window.app.incrementCounter.call(window.app);
 window.app.incrementCounter.call(window.app);
 window.app.incrementCounter.call(window.app);
