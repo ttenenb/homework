@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header id="president">Potential President</header>
+    <h1 id="donald">Donald Trump</h1>
+    <h1 id="joe">Joe Biden</h1>
+
+    <script src="pcsHelperTools.js"></script>
+    <script src="clock.js"></script>
+    <script src="addClocks.js"></script>
+    <script>
+      /*const donald = pcs.tools.get('donald');
+      pcs.tools.setCss(donald, 'color', 'blue');
+
+      const joe = pcs.tools.get('joe');
+      pcs.tools.setCss(joe, 'color', 'red');*/
+
+      //const donald = pcs.tools.wrap('donald');
+      //donald.setCss('color', 'blue');
+      //console.log(donald.getCss('color'));
+      //donald.css('color', 'blue');
+      //console.log(donald.css('color'));
+      //donald.click(() => console.log('The Donald was clicked!'));
+
+      pcs('donald')
+        .css('color', 'blue')
+        .click(() => console.log('The Donald was clicked!'));
+
+      const joe = pcs('joe');
+      //joe.setCss('color', 'red');
+      //console.log(joe.getCss('color'));
+      joe.css('color', 'red');
+      console.log(joe.css('color'));
+
+      joe.hide();
+      setTimeout(() => joe.show(), 2000);
+
+      pcs('president')
+      .css('font-size', '5em')
+      .changeBackgroundColor(4);
+    </script>
+  </body>
+
+</html>
