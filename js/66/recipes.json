@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Pizza",
+        "ingredients": [
+            "Flour",
+            "water",
+            "cheese",
+            "tomato sauce"
+        ],
+        "image": "images/pizza.jpg"
+    },
+    {
+        "name": "Pancake",
+        "ingredients": [
+            "Flour",
+            "milk",
+            "sugar",
+            "chocolate chips"
+        ],
+        "image": "images/pancake.jpg"
+    },
+    {
+        "name": "Penne Alla Vodka",
+        "ingredients": [
+            "Noodles",
+            "milk",
+            "cheese",
+            "tomato sauce"
+        ],
+        "image": "images/penne.jpg"
+    }
+]
