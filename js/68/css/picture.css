@@ -1,0 +1,15 @@
+h1 {
+  color: blue;
+  text-align: center;
+}
+#userInput {
+  margin: auto;
+  border: 1px solid green;
+  background-color: lightcoral;
+  padding: 1em;
+  width: 19em;
+  border-radius: 30px;
+}
+li {
+  list-style-type: none;
+}
