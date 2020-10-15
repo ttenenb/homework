@@ -7,7 +7,6 @@
     const wind = $('#wind');
     const sunIcon = $('#sunIcon');
     const sun = $('#sun');
-    const myKey = '8193803940fed0537cea76663ab95703';
     const units = 'imperial';
 
     let options = {
