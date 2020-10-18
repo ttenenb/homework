@@ -1,0 +1,26 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#search {
+  position: absolute;
+  padding-top: 1em;
+  z-index: 1; 
+  right: 3.5em;
+  height: 25px;
+  width: 19em;
+}
+#searchInput {
+  background-color: black;
+  color: white;
+  width: 13.5em;
+}
