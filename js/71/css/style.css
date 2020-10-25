@@ -1,0 +1,57 @@
+body {
+  background-color: lightgoldenrodyellow;
+}
+header h1,
+h2 {
+  text-align: center;
+  color: rgb(0, 255, 170);
+}
+li {
+  list-style-type: none;
+}
+#potatoHead {
+  float: left;
+  height: 100%;
+  margin-left: 3%;
+  padding-left: 4%;
+  padding-top: 5em;
+  width: 20%;
+}
+#parts {
+  display: inline-block;
+  width: 70%;
+  height: 100%;
+}
+.float {
+  width: 4%;
+  margin: 3em;
+  float: left;
+}
+.float:nth-child(2){
+  margin-right: 2px;
+}
+.float:nth-child(5){
+  margin-left: 2px;
+  }
+.float:nth-child(3){
+padding-left: 0;
+}
+.float:last-child{
+  margin-left: 14em;
+}
+.float {
+  padding: 2em;
+}
+.part {
+  position: absolute;
+}
+button{
+  color: khaki;
+  background-color: indianred;
+  padding: 1em;
+  position: absolute;
+  right: 20em;
+}
+.font{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
