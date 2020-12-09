@@ -9,48 +9,31 @@ const nameForm = document.getElementById('nameForm');
 const firstInput = document.getElementById('first');
 const lastInput = document.getElementById('last');
 const phoneInput = document.getElementById('phone');
-const editForm = document.getElementById('editForm');
 const nameTable = document.getElementById('names');
 const check = document.getElementById('check');
 const rowInd = document.getElementById('row');
-document.getElementById('addJSON').addEventListener('click', () => {
-    const re = excel();
-    if (!names.length) {
-        $('#allNames tr').remove();
-    }
-    if ($('#firstRow')) {
-        $('#firstRow').remove();
-    }
-    if (re.length > 1) {
-        re.forEach(n => {
-            n.phone = n.phone === undefined ? n.phone = '' : n.phone;
-            n.isChecked = n.isChecked === undefined ? n.isChecked = false : n.isChecked;
-            n.numberOfWeeks = n.numberOfWeeks === undefined ? n.numberOfWeeks = 0 : n.numberOfWeeks;
-            n.rowIndex = n.rowIndex === undefined ? n.rowIndex = getRow() : n.rowIndex;
-            populateNewName(n);
-            names.push(n);
-        });
-        localStorage.names = JSON.stringify(names);
-    } else {
-        message('Sorry, there are no names in this file.');
-    }
 
-});
-function getRow() {
-    return nameTable.rows.length;
-}
+//pops open the form when the add button is clicked
 document.getElementById('add').addEventListener('click', () => {
     nameForm.style.setProperty('display', 'block');
 });
+//adds a submit listener to the form
 nameForm.addEventListener('submit', e => {
     e.preventDefault();
     addName();
 });
 
+//returns a row number in the table
+function getRow() {
+    return nameTable.rows.length;
+}
+
 function addName() {
+    //deletes the "no name" row
     if (!names.length) {
         nameTable.deleteRow(1);
     }
+    //saving the name in an object
     const newName = {
         first: firstInput.value,
         last: lastInput.value,
@@ -59,26 +42,28 @@ function addName() {
         numberOfWeeks: 0,
         rowIndex: rowInd.value || getRow()
     };
+    //checking to see if this is name is being updated and if so save the row number
     if (newName.rowIndex === rowInd.value) {
-        names.splice(rowInd.value-1, 1, newName);
+        //and save this info in the name array in the old name's index
+        names.splice(rowInd.value - 1, 1, newName);
+        //and deleting the old name
         nameTable.deleteRow(rowInd.value);
-        
+    //otherwise just pop the name onto the array 
     } else {
         names.push(newName);
     }
-
+    //either way save the name in localStorage
     localStorage.names = JSON.stringify(names);
+    //call the function that updates the table with the name
     populateNewName(newName);
 
-
+    //clears the form
     clearForm(nameForm);
 }
 
+//add functionality to the form's cancel button
 document.getElementById('cancel').addEventListener('click', () => {
     clearForm(nameForm);
-});
-document.getElementById('cancelEdit').addEventListener('click', () => {
-    clearForm(editForm);
 });
 
 function clearForm(form) {
@@ -97,6 +82,7 @@ if (localStorage.names) {
     });
 }
 
+//add a button to sort the name on click
 document.getElementById('sort').addEventListener('click', () => {
     if (names.length) {
         names.sort((a, b) => a.last > b.last ? 1 : a.last < b.last ? -1 : 0);
@@ -202,6 +188,35 @@ function populateNewName(n) {
     });
 }
 
+//adds the name from the json file (which I manually put there from an excel file using a data converter tool) when this button is clicked
+document.getElementById('addJSON').addEventListener('click', () => {
+    const re = excel();
+    //remove "no names" row
+    if (!names.length) {
+        $('#allNames tr').remove();
+    }
+    //remove this "no names" row in the event that all names were deleted and such a row was inserted from the delete button
+    if ($('#firstRow')) {
+        $('#firstRow').remove();
+    }
+    //checking to see if there are any names in the json file
+    if (re.length > 1) {
+        re.forEach(n => {
+            n.phone = n.phone === undefined ? n.phone = '' : n.phone;
+            n.isChecked = n.isChecked === undefined ? n.isChecked = false : n.isChecked;
+            n.numberOfWeeks = n.numberOfWeeks === undefined ? n.numberOfWeeks = 0 : n.numberOfWeeks;
+            n.rowIndex = n.rowIndex === undefined ? n.rowIndex = getRow() : n.rowIndex;
+            populateNewName(n);
+            names.push(n);
+        });
+        localStorage.names = JSON.stringify(names);
+    } else {
+        message('Sorry, there are no names in this file.');
+    }
+
+});
+
+//importing the raffle file which chooses a winner from the checked off names
 import(/* webpackChunkName: "raffle" */ './raffle').then(module => {
     const raffle = module.default;
 
