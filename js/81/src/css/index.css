@@ -1,0 +1,100 @@
+body{
+font-family: cursive ;
+}
+table {
+  width: 40%;
+  top: 7em;
+  border-collapse: collapse;
+  left: 25em;
+  position: absolute;
+  font-family:  Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#rules {
+  color: blue;
+  text-align: center;
+  position: absolute;
+  left: 30em;
+  top: 1em;
+}
+#add {
+  position: relative;
+  color: blanchedalmond;
+  background-color: blue;
+  padding: 2em;
+  top: 30px;
+  left: 40px;
+}
+
+th,
+td {
+  border: 1px solid black;
+  text-align: center;
+}
+
+#nameForm, #editForm {
+  background-color: lightblue;
+  padding: 1em;
+  box-sizing: border-box;
+  width: 17em;
+  height: 14em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -8.5em;
+  margin-top: -5em;
+  display: none;
+}
+
+.formGroup {
+  margin-bottom: 0.5em;
+}
+
+.formGroup label {
+  width: 3em;
+  display: inline-block;
+}
+
+#winner {
+  position: absolute;
+  right: 40px;
+  top: 30px;
+  padding: 2em;
+  background-color: rgb(255, 123, 0);
+  color: rgb(148, 238, 130);
+}
+
+#post {
+  position: absolute;
+  right: 1em;
+  top: 15em;
+  width: 18em;
+  height: 30em;
+  color: darkgoldenrod;
+  background-color: darkred;
+  text-align: center;
+}
+
+#numberOfWinners {
+  position: absolute;
+  right: 40px;
+  top: 5px;
+}
+
+#winnerNumberText {
+  position: absolute;
+  right: 14em;
+  top: -7px;
+}
+
+
+#addJSON {
+  position: absolute;
+  left: 5em;
+  top: 13em;
+}
+#sort {
+  position: absolute;
+  left: 5em;
+  top: 20em;
+}
+

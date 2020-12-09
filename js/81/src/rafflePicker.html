@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raffle Picker</title>
+</head>
+
+<body>
+  <button id="add">Add name</button>
+  <p id="rules">
+    Only names that are checked off will be included in the raffle. <br>
+    Once a name is picked it will no longer be included in the list, and <br>
+    it will no longer be qualified to win.
+  </p>
+  <table id="names">
+    <thead>
+      <tr>
+        <th>In Raffle</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Phone</th>
+        <th># of Weeks</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody id="allNames">
+      <tr>
+        <td colspan="6">No names loaded</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button id="addJSON">Add JSON</button>
+  <button id="sort">Order alphabetically</button>
+  <p id="winnerNumberText">Choose number of winners</p>
+
+  <input id="numberOfWinners" type="number" value="1">
+  <button id="winner">Pick a Winning Name</button>
+
+  <form id="nameForm">
+    <div class="formGroup">
+      <label for="first">first:</label>
+      <input id="first" required>
+    </div>
+    <div class="formGroup">
+      <label for="last">last:</label>
+      <input id="last" required>
+    </div>
+    <div class="formGroup">
+      <label for="phone">phone:</label>
+      <input id="phone">
+    </div>
+    <div class="formGroup">
+      <label for="check">In raffle</label>
+      <input type="checkbox" id="check">
+    </div>
+    <div>
+      <input type="hidden" id="row" name="row">
+    </div>
+    <div class="buttons">
+      <button type="submit">Add</button>
+      <button type="button" id="cancel">Cancel</button>
+    </div>
+  </form>
+
+  <form id="editForm">
+    <div class="formGroup">
+      <label for="firstEdit">first:</label>
+      <input id="firstEdit" required>
+    </div>
+    <div class="formGroup">
+      <label for="lastEdit">last:</label>
+      <input id="lastEdit" required>
+    </div>
+    <div class="formGroup">
+      <label for="phoneEdit">phone:</label>
+      <input id="phoneEdit">
+    </div>
+    <div class="formGroup">
+      <label for="checkEdit">Include in raffle</label>
+      <input type="checkbox" id="checkEdit">
+    </div>
+    <div class="buttons">
+      <button type="submit">Add</button>
+      <button type="button" id="cancelEdit">Cancel</button>
+    </div>
+  </form>
+  <div id="post">
+    <h1> Winners</h1>
+    <span id="postwinners"></span>
+
+  </div>
+
+</html>
