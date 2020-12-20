@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+  height: 100%;
+}
+body {
+  background-color: aqua;
+}
+
+html,
+body,
+#root,
+#sidebar {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#sidebar {
+  float: left;
+  width: 25%;
+  height: 100%;
+  border-right: 1px solid black;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+#sidebar ul { 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#sidebar li {
+  border: 1px solid black;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+#weather {
+  width: 75%;
+}
