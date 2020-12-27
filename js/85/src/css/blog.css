@@ -1,0 +1,41 @@
+body {
+  background-color: ivory;
+  font-size: 1em;
+}
+#pcs {
+  text-align: center;
+  color: orchid;
+}
+#users {
+  color: maroon;
+  grid-template-columns: repeat(3, 25em);
+  display: grid;
+  gap: 2em;
+  grid-auto-rows: minmax(5em, auto);
+}
+#users li {
+  list-style-type: none;
+}
+.box {
+  border: 1px solid black;
+  text-align: center;
+  background-color: chocolate;
+}
+#posts {
+  display: none;
+  color: gold;
+  text-align: center;
+}
+#home {
+  background-color: midnightblue;
+  color: orangered;
+  position: absolute;
+  top: 2em;
+  padding: 0.5em;
+  left: 7em;
+}
+.cposts, .ccomments{
+    background-color: peru;
+    width: 75%;
+    margin: auto;
+}
