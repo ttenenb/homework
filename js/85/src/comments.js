@@ -8,8 +8,8 @@ export default async function (postID) {
             throw new Error(c.message || r.status);
         }
         $(`#post${postID}`).append(`<div class="ccomment" id="comment${postID}"></div>`);
-        c.forEach(c => $(`<br>Comment: ${c.body}<hr>`).appendTo(`#comment${postID}`));
-        $(`#comment${postID}`).css('display', 'none');
+        $(`#comment${postID}`).html('Comments: <br>');
+        c.forEach(c => $(`<hr> ${c.body}</hr>`).appendTo(`#comment${postID}`));
 
     } catch (err) {
         return console.error(err);

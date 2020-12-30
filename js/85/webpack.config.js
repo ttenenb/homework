@@ -1,16 +1,20 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
  const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: ['./src/index.js',
+    'webpack/hot/dev-server',
+    'webpack-dev-server/client?http://localhost:8080/',],
     plugins: [
         new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
         new HtmlWebpackPlugin({
             title: "Tzvi's project",
             template: './src/index.html'
         }),
+        new webpack.HotModuleReplacementPlugin(),
         // new CompressionPlugin(),
         new ESLintPlugin()
     ],
@@ -22,7 +26,9 @@ module.exports = {
     devtool: 'source-map',
     devServer: {
         contentBase: './dist',
+        hot: true
     },
+    mode: 'development',
     module: {
         rules: [
             {

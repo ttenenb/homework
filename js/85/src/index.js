@@ -1,3 +1,4 @@
+ /*global module*/ 
 import $ from 'jquery';
 import './css/blog.css'
 import posts from './posts';
@@ -37,3 +38,9 @@ $('#home').on('click', () => {
     $('#posts').html('');
 
 });
+
+if (module.hot) {
+    module.hot.dispose(function () {
+        // $('#users').empty();  
+    });
+}

@@ -34,8 +34,11 @@ body {
   padding: 0.5em;
   left: 7em;
 }
-.cposts, .ccomments{
+.cposts{
     background-color: peru;
     width: 75%;
     margin: auto;
+}
+.ccomment{
+  background-color:orange;
 }

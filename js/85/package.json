@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
+    "startdev": "webpack-dev-server",
     "start": "webpack serve --open Chrome.exe",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
