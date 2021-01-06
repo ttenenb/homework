@@ -1,0 +1,9 @@
+.blog{
+    background-color: aqua;
+    text-align: center;
+    padding: 1em;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
