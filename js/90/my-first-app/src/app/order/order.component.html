@@ -1,0 +1,8 @@
+<hr/>
+<br/>
+<app-person [person]="order.customer"></app-person>
+<hr/>
+<br/>
+<h2>Order Date: {{order.orderDate}}</h2>
+<app-item [item]="order.item"></app-item>
+<h6 ng.If="order.paid">Paid &#10003;</h6>
