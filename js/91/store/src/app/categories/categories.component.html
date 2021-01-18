@@ -1,0 +1,26 @@
+<label for="categories">Category: </label>
+<select name="categories" #categorySelect [(ngModel)]="selectedCT">
+<!--  (change)="categorySelect"-->
+ <option></option>
+  <option value={{i}} *ngFor="let category of categories; let i=index">
+    {{category.title}}
+  </option>
+</select>
+
+<app-items [items]="categories[categorySelect.value]?.items">
+</app-items>
+<hr/>
+  <input #newCN placeholder="add category name">
+
+  <button (click)="add($event,newCN.value)">add category</button>
+  <hr/>
+
+
+<!-- <ul>
+  <li *ngFor="let category of categories" #cs (click)="set(cs)">
+    {{category.title}}
+    <button (click)="deleteCategory(cs)">delete</button>
+  </li>
+</ul>
+<app-items [items]="selectedCategory?.items">
+</app-items> -->

@@ -1,0 +1,7 @@
+<h6 *ngIf="items && !items?.length">
+  Sorry, there are no items in this category</h6>
+<h4 *ngFor="let item of items">
+  {{item.name}} -
+  {{item.price | currency}}
+</h4>
+
