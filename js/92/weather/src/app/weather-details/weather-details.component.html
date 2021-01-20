@@ -1,0 +1,6 @@
+<h1 *ngIf="weatherDetails?.name">The weather for {{weatherDetails?.name}}</h1>
+<ng-container *ngIf="weatherDetails?.weather">
+<h2>{{weatherDetails?.weather[0].description | uppercase}}</h2>
+<img *ngIf="weatherDetails?.weather[0]?.icon" src="http://openweathermap.org/img/wn/{{this.weatherDetails.weather[0].icon}}.png" alt={{weatherDetails.weather[0].description}} />
+</ng-container>
+<h2 *ngIf="weatherDetails?.main?.temp">The temperature is {{weatherDetails?.main?.temp}} degrees</h2>

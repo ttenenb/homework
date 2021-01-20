@@ -1,0 +1,9 @@
+<header>
+<h1>{{title}}</h1>
+</header>
+
+<hr/>
+<input #zip [(ngModel)]="weatherDetails" (ngModelChange)="getWeather(zip.value)" minlength="5" maxlength="5" type="number">
+
+<app-weather-details [weatherDetails]="weatherDetails"></app-weather-details>
+
