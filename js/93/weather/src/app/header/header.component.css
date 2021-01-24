@@ -1,0 +1,11 @@
+hr{
+  border-color:  blue;
+}
+
+h1{
+  text-align: center;
+  text-shadow: 1px 1px 2px blue;
+  margin: -6px;
+  padding: 20px;
+  background-color: lightseagreen;
+}

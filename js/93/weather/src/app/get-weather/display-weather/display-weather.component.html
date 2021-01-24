@@ -1,0 +1,9 @@
+<ng-container *ngIf="display;else notLoaded">
+  <h1>The weather in {{display?.name}}</h1>
+  <h3>{{display?.description}}</h3>
+  <img [src]="display?.icon" [alt]="display?.description" />
+</ng-container>
+  <ng-template #notLoaded>
+    Loading...
+  </ng-template>
+
