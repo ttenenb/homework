@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  width: 80%;
+  margin: auto;
+  background-color: rgb(221, 90, 185) ;
+  color:rgb(110,51,20);
+}
+a{
+  color:rgb(110,51,20);
+}

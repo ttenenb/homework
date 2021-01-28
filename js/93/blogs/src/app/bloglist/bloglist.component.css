@@ -1,0 +1,11 @@
+
+.box {
+  border: 1px solid black;
+  display: inline-flex;
+  height: 9em;
+  width: 20em;
+  padding: .5em;
+  margin: 1em;
+  text-align: center;
+  cursor: pointer;
+}

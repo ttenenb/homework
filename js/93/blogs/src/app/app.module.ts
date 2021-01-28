@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostsComponent } from './posts/posts.component';
-import { UserIdComponent } from './user-id/user-id.component';
+import { BloglistComponent } from './bloglist/bloglist.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
-    UserIdComponent
+    BloglistComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

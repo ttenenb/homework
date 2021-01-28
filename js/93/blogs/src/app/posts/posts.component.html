@@ -1,1 +1,8 @@
-<p >posts works!</p>
+<button (click)="displayPrev()">Previous</button>
+<button (click)="displayNext()" class="next">Next</button>
+<ul *ngFor="let post of currentPosts;">
+  <li>
+    <h2>{{post.title}}</h2>
+    <p>{{post.body}}</p>
+  </li>
+</ul>

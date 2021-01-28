@@ -1,0 +1,6 @@
+  <div class="box " *ngFor=" let blog of blogs">
+    <a [routerLink]="['/posts', blog.id]">
+      <h1 >{{blog?.name}}</h1>
+      {{blog?.website}}
+    </a>
+  </div>
