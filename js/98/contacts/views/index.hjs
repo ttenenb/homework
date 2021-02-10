@@ -1,0 +1,5 @@
+<ul>
+{{#contacts}}
+<li>{{.}}</li>
+{{/contacts}}
+</ul>
