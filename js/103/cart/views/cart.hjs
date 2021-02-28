@@ -1,0 +1,31 @@
+<link href="\stylesheets\index.css" rel="stylesheet" />
+<u>Your Orders
+</u>
+<br>
+<a href="/">home</a>
+<br>
+Your Cart has {{items.length}} item(s) in it
+<br>
+
+<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+  {{#items}}
+  <div class="col">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 fw-normal">{{name}}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{price}}</h1>
+        <img src="{{img}}" alt="{{name}}" />
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>{{name}}</li>
+          <li>{{description}}</li>
+          <li>Count: {{count}}</li>
+        </ul>
+      </div>
+    </div>
+  </div> 
+   {{/items}}
+</div>
+
+Your total is ${{total}}
