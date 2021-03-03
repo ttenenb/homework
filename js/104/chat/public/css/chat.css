@@ -1,0 +1,22 @@
+#messages {
+  height: 10em;
+  border: 1px solid black;
+  margin-bottom: .5em;
+}
+
+#messageForm {
+  display: flex;
+}
+
+#message {
+  flex: 1;
+  margin-right: .5em;
+}
+
+#messagesContainer {
+  display: none;
+}
+
+#error {
+  color: red;
+}
