@@ -1,0 +1,19 @@
+.blog {
+  display: block;
+  width: 100%;
+  margin-bottom: 2em;
+  text-align: left;
+}
+
+.blog .title {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.blog .body {
+  font-size: medium;
+}
+
+.submitcomment{
+  display: none;
+}
